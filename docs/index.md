@@ -8,56 +8,56 @@
 :maxdepth: 3
 :caption: 准备工作
 
-content_cn/preparation.md
-content_cn/manage_pre.md
-content_cn/guideline.md
+content_en/preparation.md
+content_en/manage_pre.md
+content_en/guideline.md
 ```
 
 ```{toctree}
 :maxdepth: 4
 :caption: 仿真
 
-content_cn/simulation.md
-content_cn/simulation_snps.md
-content_cn/simulation_cdns.md
+content_en/simulation.md
+content_en/simulation_snps.md
+content_en/simulation_cdns.md
 ```
 
 ```{toctree}
 :maxdepth: 3
 :caption: 回归测试
 
-content_cn/regression.md
-content_cn/regression_snps.md
-content_cn/regression_cdns.md
+content_en/regression.md
+content_en/regression_snps.md
+content_en/regression_cdns.md
 ```
 
 ```{toctree}
 :maxdepth: 3
 :caption: 其他库
 
-content_cn/libraries.md
+content_en/libraries.md
 ```
 
 ```{toctree}
 :maxdepth: 3
 :caption: 作业调度器
 
-content_cn/job_scheduler.md
+content_en/job_scheduler.md
 ```
 
 ```{toctree}
 :maxdepth: 3
 :caption: 工具
 
-content_cn/info_analysis.md
-content_cn/gen_uvm.md
-content_cn/gen_tb_related.md
-content_cn/manage.md
+content_en/info_analysis.md
+content_en/gen_uvm.md
+content_en/gen_tb_related.md
+content_en/manage.md
 ```
 
 ```{toctree}
 :maxdepth: 3
 :caption: 关于
 
-content_cn/author.md
+content_en/author.md
 ```
