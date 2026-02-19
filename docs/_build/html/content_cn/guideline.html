@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文件管理指南 &mdash; UVE 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="/content_cn/guideline.html" />
+      <script src="../_static/documentation_options.js?v=f115507d"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+      <script defer="defer" src="../_static/readthedocs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="仿真" href="simulation.html" />
+    <link rel="prev" title="调试" href="manage_pre.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_cn.html" class="icon icon-home">
+            UVE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">准备工作</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manage_pre.html">调试</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">文件管理指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design">在 design 文件夹中创建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#doc">在 doc 文件夹中创建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test">在 test 文件夹中创建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">创建测试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testlist">创建 testlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verif">在 verif 文件夹中创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pkg-uvc">创建 pkg/uvc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">创建序列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">创建通用内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vip">在 vip 文件夹中创建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tools">在 tools 文件夹中创建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#result-check">result_check</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">仿真</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation_snps.html">VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation_cdns.html">Xcelium</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">回归测试</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">回归测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_snps.html">VCS 回归选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_cdns.html">Xcelium 回归选项</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">作业调度器</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="job_scheduler.html">作业调度器</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info_analysis.html">信息分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_uvm.html">UVM 包生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_tb_related.html">自动化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manage.html">进程管理</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="author.html">作者</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_cn.html">UVE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_cn.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">文件管理指南</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/content_cn/guideline.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>文件管理指南<a class="headerlink" href="#id1" title="链接到此标题。">¶</a></h1>
+<section id="design">
+<h2>在 design 文件夹中创建<a class="headerlink" href="#design" title="链接到此标题。">¶</a></h2>
+<p>请勿修改以下文件：</p>
+<ul class="simple">
+<li><p>design/fl/dut.f</p></li>
+<li><p>design/fl/dut_auto_fl/xxx_filelist.f</p></li>
+</ul>
+<p>这些文件是自动生成的。</p>
+<p>请使用有意义的文件夹来组织设计文件。</p>
+</section>
+<section id="doc">
+<h2>在 doc 文件夹中创建<a class="headerlink" href="#doc" title="链接到此标题。">¶</a></h2>
+<p>请勿修改以下文件：</p>
+<ul class="simple">
+<li><p>doc/test_status.xlsx</p></li>
+</ul>
+<p>这些文件是自动生成的。</p>
+</section>
+<section id="test">
+<h2>在 test 文件夹中创建<a class="headerlink" href="#test" title="链接到此标题。">¶</a></h2>
+<p>基础测试可被不同模块的测试扩展，可以放在 test 文件夹中。</p>
+<section id="id2">
+<h3>创建测试<a class="headerlink" href="#id2" title="链接到此标题。">¶</a></h3>
+<ul class="simple">
+<li><p>同一模块的各种测试应放在以模块命名的文件夹中</p></li>
+<li><p>测试名称应以模块名开头</p></li>
+<li><p>类型应紧跟在测试名称中模块名之后</p></li>
+<li><p>测试名称应以 _test.sv 结尾</p></li>
+</ul>
+<p>例如：
+xxx/xxx_aaa_sv_test.sv
+xxx/xxx_aaa_sv_test.sv
+xxx/xxx_bbb_ccc_sv_test.sv</p>
+</section>
+<section id="testlist">
+<h3>创建 testlist<a class="headerlink" href="#testlist" title="链接到此标题。">¶</a></h3>
+<blockquote>
+<div><p>注意：无论 testlist 文件中有多少测试，都不要忘记添加 SUITE 行</p>
+</div></blockquote>
+<p>testlist 的命名格式应为：testlist_xxx</p>
+<p>例如，testlist_xxx</p>
+<p>应包含注释：</p>
+<ul class="simple">
+<li><p>Description:（作为标题）</p></li>
+<li><p>每个部分用 ',' 分隔</p></li>
+<li><p>每个部分格式：Some Topic-详细信息</p></li>
+<li><p>Random-xxx、Owner-xxx 应放在注释的末尾</p></li>
+</ul>
+<p>可以使用选项 <code class="docutils literal notranslate"><span class="pre">-gen_testlist</span></code> 生成示例 testlist_xxx</p>
+</section>
+<section id="verif">
+<h3>在 verif 文件夹中创建<a class="headerlink" href="#verif" title="链接到此标题。">¶</a></h3>
+<p>请勿修改以下文件：</p>
+<ul class="simple">
+<li><p>verif/tb/test_include/xxx_test_include.sv</p></li>
+<li><p>tb.f</p></li>
+</ul>
+<p>这些文件是自动生成的。</p>
+</section>
+<section id="pkg-uvc">
+<h3>创建 pkg/uvc<a class="headerlink" href="#pkg-uvc" title="链接到此标题。">¶</a></h3>
+<p>单个模块的所有组件应放在 verif/pkg 文件夹中以模块名命名的文件夹内。</p>
+</section>
+<section id="id3">
+<h3>创建序列<a class="headerlink" href="#id3" title="链接到此标题。">¶</a></h3>
+<p>序列和 sequence_library 应放在相关模块文件夹中的新创建的 seqs 文件夹内。</p>
+</section>
+<section id="id4">
+<h3>创建通用内容<a class="headerlink" href="#id4" title="链接到此标题。">¶</a></h3>
+<p>testbench 的通用内容应放在 tb 文件夹中：</p>
+<ul class="simple">
+<li><p>tb/top</p></li>
+<li><p>tb/top_sub</p></li>
+<li><p>tb/tb_include</p></li>
+<li><p>tb/test_include</p></li>
+<li><p>tb/wrappers</p></li>
+</ul>
+<p>请保持顺序，不要造成编译错误而中断他人的工作。</p>
+</section>
+<section id="vip">
+<h3>在 vip 文件夹中创建<a class="headerlink" href="#vip" title="链接到此标题。">¶</a></h3>
+<p>请勿复制文件到此文件夹。如果 VIP 来自 Synopsys，此处的所有文件都使用 Synopsys VIP 工具生成。</p>
+</section>
+</section>
+<section id="tools">
+<h2>在 tools 文件夹中创建<a class="headerlink" href="#tools" title="链接到此标题。">¶</a></h2>
+<p>IP 指定的工具应放在以模块名命名的文件夹中。</p>
+<section id="result-check">
+<h3>result_check<a class="headerlink" href="#result-check" title="链接到此标题。">¶</a></h3>
+<p>这用于错误/警告检查，并涉及使用 pytest 框架进行结果复核和审查。</p>
+<p>这也会影响网站和 CI 中的结果报告。</p>
+<p>可以根据不同的项目阶段修改检查规则为严格或宽松：</p>
+<ul class="simple">
+<li><p>早期阶段 - 宽松</p></li>
+<li><p>后期阶段 - 严格</p></li>
+</ul>
+<p>使用此策略来消除被忽略的错误或检查器的泄漏，以确保 tape-out 前验证的成功。</p>
+<p>有 4 个文件来管理检查方法：</p>
+<ul class="simple">
+<li><p>result_error_check</p></li>
+<li><p>result_error_ignore</p></li>
+<li><p>result_warning_check</p></li>
+<li><p>result_warning_ignore</p></li>
+</ul>
+<p>&quot;//&quot; 将被视为注释并被流程忽略。</p>
+<p>规则如下：</p>
+<ul class="simple">
+<li><p>首先忽略 ignore 列表中的项目</p></li>
+<li><p>如果 check 中的文本匹配，但 ignore 中有更具体的文本，则更具体的文本将被忽略</p></li>
+<li><p>warning 检查会导致用例失败</p></li>
+<li><p>每个日志将被视为一个单独的测试，应用到整个规则</p></li>
+</ul>
+<p>请注意：</p>
+<ul class="simple">
+<li><p>想要修改此内容的用户应非常谨慎，最好是添加而不是减少。特别是在通用块中。</p></li>
+<li><p>用户可以以详细的描述开始 ignore/check 并为其添加/修改自己的项目。</p></li>
+<li><p>请注意，所有修改都将影响整个项目和所有人。来自其他工程师的测试可能会获得虚假通过。</p></li>
+<li><p>规则文件应多次审查，以覆盖不应被遗漏的内容。</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="manage_pre.html" class="btn btn-neutral float-left" title="调试" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="simulation.html" class="btn btn-neutral float-right" title="仿真" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Saltyfish.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

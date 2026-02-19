@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xcelium &mdash; UVE 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="/content_cn/simulation_cdns.html" />
+      <script src="../_static/documentation_options.js?v=f115507d"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+      <script defer="defer" src="../_static/readthedocs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="回归测试" href="regression.html" />
+    <link rel="prev" title="VCS" href="simulation_snps.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_cn.html" class="icon icon-home">
+            UVE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">准备工作</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preparation.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manage_pre.html">调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guideline.html">文件管理指南</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">仿真</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation_snps.html">VCS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Xcelium</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c-run1">-c_run1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-run3">-c_run3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-com">-c_com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-dut">-c_dut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-tb">-c_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-sim">-c_sim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xrun">波形兼容性（XRUN）</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">回归测试</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">回归测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_snps.html">VCS 回归选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_cdns.html">Xcelium 回归选项</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">作业调度器</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="job_scheduler.html">作业调度器</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info_analysis.html">信息分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_uvm.html">UVM 包生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_tb_related.html">自动化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manage.html">进程管理</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="author.html">作者</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_cn.html">UVE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_cn.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Xcelium</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/content_cn/simulation_cdns.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xcelium">
+<h1>Xcelium<a class="headerlink" href="#xcelium" title="链接到此标题。">¶</a></h1>
+<blockquote>
+<div><p>指定 <code class="docutils literal notranslate"><span class="pre">-tool=cdns</span></code> 以使用这些选项。</p>
+</div></blockquote>
+<section id="c-run1">
+<h2>-c_run1<a class="headerlink" href="#c-run1" title="链接到此标题。">¶</a></h2>
+<p>选择 Cadence 工具的运行方式：<code class="docutils literal notranslate"><span class="pre">step1</span></code>。执行从编译到仿真的完整流程。</p>
+</section>
+<section id="c-run3">
+<h2>-c_run3<a class="headerlink" href="#c-run3" title="链接到此标题。">¶</a></h2>
+<p>选择 Cadence 工具的运行方式：<code class="docutils literal notranslate"><span class="pre">step3</span></code>。执行从编译到仿真的完整流程。</p>
+</section>
+<section id="c-com">
+<h2>-c_com<a class="headerlink" href="#c-com" title="链接到此标题。">¶</a></h2>
+<p>仅使用 XRUN 1-step 方法进行编译。</p>
+</section>
+<section id="c-dut">
+<h2>-c_dut<a class="headerlink" href="#c-dut" title="链接到此标题。">¶</a></h2>
+<p>使用 XRUN 3-step 方法编译 DUT。</p>
+</section>
+<section id="c-tb">
+<h2>-c_tb<a class="headerlink" href="#c-tb" title="链接到此标题。">¶</a></h2>
+<p>使用 XRUN 3-step 方法编译 testbench。</p>
+<p><strong>保护：</strong> <code class="docutils literal notranslate"><span class="pre">-c_tb</span></code> 需要有效的 DUT 编译数据库。如果同一命令中未请求 DUT 编译，请指定 <code class="docutils literal notranslate"><span class="pre">-base_dut=&lt;name&gt;</span></code>。</p>
+</section>
+<section id="c-sim">
+<h2>-c_sim<a class="headerlink" href="#c-sim" title="链接到此标题。">¶</a></h2>
+<p>使用 XRUN 3-step 方法执行仿真。</p>
+<p><strong>保护：</strong> <code class="docutils literal notranslate"><span class="pre">-c_sim</span></code> 需要有效的 TB 编译数据库。如果同一命令中未请求 TB 编译，请指定 <code class="docutils literal notranslate"><span class="pre">-base_tb=&lt;name&gt;</span></code>。</p>
+</section>
+<section id="xrun">
+<h2>波形兼容性（XRUN）<a class="headerlink" href="#xrun" title="链接到此标题。">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">-wave=shm</span></code> 是 Cadence 原生格式。</p>
+<p><code class="docutils literal notranslate"><span class="pre">-wave=fsdb</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-wave=vpd</span></code> 可能在正确的 PLI 设置下才能工作，但不是默认推荐。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="simulation_snps.html" class="btn btn-neutral float-left" title="VCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="regression.html" class="btn btn-neutral float-right" title="回归测试" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Saltyfish.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

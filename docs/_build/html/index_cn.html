@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UVE 文档 &mdash; UVE 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="/index_cn.html" />
+      <script src="_static/documentation_options.js?v=f115507d"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+      <script defer="defer" src="_static/readthedocs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="准备工作" href="content_cn/preparation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            UVE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">准备工作</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/preparation.html">准备工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/manage_pre.html">调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/guideline.html">文件管理指南</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">仿真</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation.html">仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation_snps.html">VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation_cdns.html">Xcelium</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">回归测试</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression.html">回归测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression_snps.html">VCS 回归选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression_cdns.html">Xcelium 回归选项</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">其他库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/libraries.html">库</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">作业调度器</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/job_scheduler.html">作业调度器</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/info_analysis.html">信息分析</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/gen_uvm.html">UVM 包生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/gen_tb_related.html">自动化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/manage.html">进程管理</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/author.html">作者</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">UVE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">UVE 文档</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index_cn.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uve">
+<h1>UVE 文档<a class="headerlink" href="#uve" title="链接到此标题。">¶</a></h1>
+<p>通用验证环境</p>
+<blockquote>
+<div><p>应在项目根目录下执行。</p>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">准备工作</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/preparation.html">准备工作</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/preparation.html#h-help">-h/--help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/preparation.html#env-setup">-env_setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/preparation.html#env-unset">-env_unset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/preparation.html#json">-json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/preparation.html#json-extra">-json_extra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/manage_pre.html">调试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage_pre.html#debug">-debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage_pre.html#check-testlist">-check_testlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage_pre.html#clean">-clean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage_pre.html#git-update">-git_update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage_pre.html#check-git-clean">-check_git_clean</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/guideline.html">文件管理指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/guideline.html#design">在 design 文件夹中创建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/guideline.html#doc">在 doc 文件夹中创建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/guideline.html#test">在 test 文件夹中创建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#id2">创建测试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#testlist">创建 testlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#verif">在 verif 文件夹中创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#pkg-uvc">创建 pkg/uvc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#id3">创建序列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#id4">创建通用内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#vip">在 vip 文件夹中创建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/guideline.html#tools">在 tools 文件夹中创建</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/guideline.html#result-check">result_check</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">仿真</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation.html">仿真</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#tool">-tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#list">-list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#auto-dut">-auto_dut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#auto-tb">-auto_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#manual-dut">-manual_dut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#manual-tb">-manual_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#run-folder">-run_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#name">-name</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/simulation.html#base-dut">-base_dut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/simulation.html#base-tb">-base_tb</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#dry-run">-dry_run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#dump-scope">-dump_scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#prerun">-prerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#postrun">-postrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#define">-define</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#tpa">-tpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#vpa">-vpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#seed">-seed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#repeat">-repeat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#wave">-wave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#cov">-cov</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation.html#id2">运行时保护</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation_snps.html">VCS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-run2">-s_run2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-run3">-s_run3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-com">-s_com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-dut">-s_dut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-tb">-s_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-sim">-s_sim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#s-part-comp">-s_part_comp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_snps.html#id1">波形兼容性（VCS）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/simulation_cdns.html">Xcelium</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-run1">-c_run1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-run3">-c_run3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-com">-c_com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-dut">-c_dut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-tb">-c_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#c-sim">-c_sim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/simulation_cdns.html#xrun">波形兼容性（XRUN）</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">回归测试</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression.html">回归测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#id2">终端显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#reg-num">-reg_num</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#suite">-suite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#rm-pass">-rm_pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#rerun">-rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#rerun-for">rerun_for 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#report">-report（待完成）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/regression.html#step2">-step2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content_cn/regression.html#clean">-clean</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression.html#id3">真实随机回归助手</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression_snps.html">VCS 回归选项</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_snps.html#s-regress2">-s_regress2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_snps.html#s-regress3">-s_regress3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_snps.html#s-rerun2-for">-s_rerun2_for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_snps.html#s-rerun3-for">-s_rerun3_for</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/regression_cdns.html">Xcelium 回归选项</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_cdns.html#c-regress1">-c_regress1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_cdns.html#c-regress3">-c_regress3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_cdns.html#c-rerun1-for">-c_rerun1_for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/regression_cdns.html#c-rerun3-for">-c_rerun3_for</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">其他库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/libraries.html">库</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/libraries.html#svlib">-svlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/libraries.html#syoscb">-syoscb</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">作业调度器</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/job_scheduler.html">作业调度器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/job_scheduler.html#job">-job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/job_scheduler.html#lsf-q">-lsf_q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/job_scheduler.html#slurm-q">-slurm_q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/job_scheduler.html#slurm-mem">-slurm_mem</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/info_analysis.html">信息分析</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/info_analysis.html#info-defines">-info_defines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/info_analysis.html#info-git-submodule">-info_git_submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/info_analysis.html#info-uvm">-info_uvm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/info_analysis.html#info-all-testlist">-info_all_testlist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/gen_uvm.html">UVM 包生成</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#gen-uvm-tp-json">-gen_uvm_tp_json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#gen-uvm-tp-yaml">-gen_uvm_tp_yaml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#gen-uvm-tp-toml">-gen_uvm_tp_toml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#gen-uvm-tp-name">-gen_uvm_tp_name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#gen-uvm-pkg">-gen_uvm_pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#conv">-conv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_uvm.html#conv-file">-conv_file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/gen_tb_related.html">自动化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-test-status">-gen_test_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-tb">-gen_tb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-tb-top">-gen_tb_top</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-tb-include">-gen_tb_include</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-testlist">-gen_testlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/gen_tb_related.html#gen-base-test">-gen_base_test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/manage.html">进程管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage.html#show-z">-show_z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage.html#kill-z">-kill_z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage.html#show-grep">-show_grep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_cn/manage.html#kill-grep">-kill_grep</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">关于</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content_cn/author.html">作者</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="content_cn/preparation.html" class="btn btn-neutral float-right" title="准备工作" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Saltyfish.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
