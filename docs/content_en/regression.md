@@ -88,7 +88,7 @@ python3 run -s_regress2=test/xxx/testlist_xxx -reg_num=8 -wave=fsdb -seed=100
 
 请在相关工具描述中查看详细选项。
 
-## -report（待完成）
+## -report
 
 此选项仅在回归期间有效，支持 VCS-2step 和 VCS-3step 流程。
 

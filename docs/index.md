@@ -53,6 +53,7 @@ content_en/info_analysis.md
 content_en/gen_uvm.md
 content_en/gen_tb_related.md
 content_en/manage.md
+content_en/reggen.md
 ```
 
 ```{toctree}
