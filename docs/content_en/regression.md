@@ -131,27 +131,3 @@ python3 run -s_regress2=test/xxx/testlist_xxx -reg_num=8 -wave=fsdb -seed=100
 - 警告检查/忽略
 
 这对于 QA 验证非常重要。
-
-## 真实随机回归助手
-
-辅助脚本位于：
-
-`uve_tools/md_tools/real_regress_runner.py`
-
-在准备的容器环境中的典型用法：
-
-```terminal
-python3 uve_tools/md_tools/real_regress_runner.py --project-root /home/devuser/uve/uve --count 30 --mode real --tools all --setup-script auto --shell-mode auto
-```
-
-推荐的行为：
-
-- 默认是共享运行文件夹，以便可以有意重用编译和 testbench 的工件。
-- 仅在需要严格的每个用例隔离时才添加 `--isolated-run-folder`。
-- 如果想避免在随机抽样中选择部分流程命令，请使用 `--skip-partial-flow`。
-
-输出：
-
-- `summary.json`
-- `summary.md`
-- 每个用例的日志和命令记录

@@ -11,6 +11,7 @@
 content_en/preparation.md
 content_en/manage_pre.md
 content_en/guideline.md
+content_en/uve_startup.md
 ```
 
 ```{toctree}
@@ -20,6 +21,7 @@ content_en/guideline.md
 content_en/simulation.md
 content_en/simulation_snps.md
 content_en/simulation_cdns.md
+content_en/run_cocotb.md
 ```
 
 ```{toctree}
@@ -54,6 +56,7 @@ content_en/gen_uvm.md
 content_en/gen_tb_related.md
 content_en/manage.md
 content_en/reggen.md
+content_en/server.md
 ```
 
 ```{toctree}
