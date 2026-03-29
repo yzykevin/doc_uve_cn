@@ -57,6 +57,7 @@ content_en/gen_tb_related.md
 content_en/manage.md
 content_en/reggen.md
 content_en/server.md
+content_en/repo_link.md
 ```
 
 ```{toctree}

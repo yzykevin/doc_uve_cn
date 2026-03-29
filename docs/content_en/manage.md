@@ -29,3 +29,7 @@
 - **类型**：`string`
 - **默认**：空字符串
 - **用法**：指定一个模式来终止进程。示例：`-kill_grep=xxx`。
+
+## Certitude 工具
+
+Certitude 工具集成于 `uve_tools`，用于辅助 Certitude 突变测试流程。该工具可自动生成 HDL 源文件列表、主流仿真器的编译和执行脚本（包括 VCS、NC 和 ModelSim），并支持清理测试过程中产生的各类临时文件。
