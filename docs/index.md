@@ -58,6 +58,7 @@ content_en/manage.md
 content_en/reggen.md
 content_en/server.md
 content_en/repo_link.md
+content_en/jg_run.md
 ```
 
 ```{toctree}

@@ -43,4 +43,8 @@
 
 `-wave=fsdb` 和 `-wave=vpd` 支持 VCS。
 
-`-wave=shm` 是 Cadence 专用的，在 VCS 中被阻止。
+`-wave=shm` 和 `-wave=indago` 是 Cadence 专用的，在 VCS 中被阻止。
+
+## -gui（VCS）
+
+以交互模式打开 Verdi。仿真在时间 0 暂停；用户在 Verdi 中手动触发运行。

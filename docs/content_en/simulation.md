@@ -140,12 +140,22 @@ filelists 应在相对根目录 `verif/fl/tb_manual_fl/` 中准备和管理。
 
 ## -wave
 
-指定波形转储格式。选项：`fsdb`、`vpd`、`shm`。
+指定波形转储格式。选项：`fsdb`、`vpd`、`shm`、`indago`。
 
 兼容性建议：
 
-- `snps`：使用 `fsdb` 或 `vpd`；`shm` 无效。
-- `cdns`：使用 `shm`；`fsdb`/`vpd` 需要额外的 PLI 环境。
+- `snps`：使用 `fsdb` 或 `vpd`；`shm` 和 `indago` 无效。
+- `cdns`：使用 `shm` 或 `indago`；`fsdb`/`vpd` 需要额外的 PLI 环境。
+
+## -gui
+
+以交互模式打开波形查看器。仿真在时间 0 暂停，等待用户手动启动运行。
+
+各工具行为：
+
+- `snps`：打开 Verdi；结合 `-wave=fsdb` 可查看波形。
+- `cdns` + `-wave=shm`：打开 SimVision；暂停并等待用户操作。
+- `cdns` + `-wave=indago`：打开 Indago；自动配置 probe，仿真暂停并等待用户操作。
 
 ## -cov
 

@@ -50,7 +50,7 @@ def main() -> None:
                 run(["git", "add", "-A"])
                 run(["git", "commit", "-m", f"docs: prepare {version} release"])
             else:
-                print("Aborting — please commit or stash changes first.", file=sys.stderr)
+                print("Aborting - please commit or stash changes first.", file=sys.stderr)
                 sys.exit(1)
 
         existing_tags = get_output(["git", "tag"]).splitlines()

@@ -34,4 +34,13 @@
 
 `-wave=shm` 是 Cadence 原生格式。
 
+`-wave=indago` 支持 Cadence Indago 波形捕获。
+
 `-wave=fsdb` 和 `-wave=vpd` 可能在正确的 PLI 设置下才能工作，但不是默认推荐。
+
+## -gui（XRUN）
+
+以交互模式打开波形查看器。仿真在时间 0 暂停，等待用户操作。
+
+- 使用 `-wave=shm` 时：打开 SimVision。
+- 使用 `-wave=indago` 时：打开 Indago，并自动配置 probe。

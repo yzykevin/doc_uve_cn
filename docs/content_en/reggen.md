@@ -11,10 +11,10 @@
 
 ## 支持的输出类型
 
-- **UVM RAL 模型** — SystemVerilog UVM 寄存器抽象层，用于测试平台集成
-- **SystemVerilog RTL** — 可综合的寄存器模块 RTL，支持多种总线接口配置
-- **C Header** — 便携式 C 头文件，用于嵌入式软件/固件访问寄存器
-- **Markdown 文档** — 自动生成的寄存器参考文档
+- **UVM RAL 模型** - SystemVerilog UVM 寄存器抽象层，用于测试平台集成
+- **SystemVerilog RTL** - 可综合的寄存器模块 RTL，支持多种总线接口配置
+- **C Header** - 便携式 C 头文件，用于嵌入式软件/固件访问寄存器
+- **Markdown 文档** - 自动生成的寄存器参考文档
 
 ## 支持的总线协议
 
