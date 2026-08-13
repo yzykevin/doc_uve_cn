@@ -18,7 +18,6 @@ extensions = ['myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-html_static_path = ['_static']
 
 # Language setting for Chinese
 language = 'zh_CN'
@@ -33,7 +32,6 @@ import os
 import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_static_path = ['_static']
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 html_js_files = [
     ("readthedocs.js", {"defer": "defer"}),

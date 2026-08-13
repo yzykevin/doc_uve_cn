@@ -2,68 +2,11 @@
 
 通用验证环境
 
-> 应在项目根目录下执行。
+本公开网站仅提供 UVE 及其配套工具的高层次介绍。详细项目流程和实现文档单独维护，不纳入公开导航。
 
 ```{toctree}
-:maxdepth: 3
-:caption: 准备工作
+:maxdepth: 2
+:caption: 概览
 
-content_en/preparation.md
-content_en/manage_pre.md
-content_en/guideline.md
-content_en/uve_startup.md
-```
-
-```{toctree}
-:maxdepth: 4
-:caption: 仿真
-
-content_en/simulation.md
-content_en/simulation_snps.md
-content_en/simulation_cdns.md
-content_en/run_cocotb.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: 回归测试
-
-content_en/regression.md
-content_en/regression_snps.md
-content_en/regression_cdns.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: 其他库
-
-content_en/libraries.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: 作业调度器
-
-content_en/job_scheduler.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: 工具
-
-content_en/info_analysis.md
-content_en/gen_uvm.md
-content_en/gen_tb_related.md
-content_en/manage.md
-content_en/reggen.md
-content_en/server.md
-content_en/repo_link.md
-content_en/jg_run.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: 关于
-
-content_en/author.md
+content_en/overview.md
 ```
