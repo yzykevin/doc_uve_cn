@@ -54,7 +54,7 @@ UVE 工具链通过面向项目的工具，统一组织主要验证活动。
 根据项目和已安装的许可证，UVE 支持集成：
 
 - Synopsys VCS；
-- Cadence Xcelium/XRUN；
+- Cadence Xcelium；
 - Icarus Verilog；
 - Verilator；以及
 - 其他由项目配置的开源仿真器。
@@ -110,7 +110,7 @@ UVE 支持通过可复用设计和验证组件、可配置接口、项目元数�
 
 验证任务可以通过支持调度器的工具流连接到受管理的计算资源。UVE 提供 Slurm 和 LSF 集成模式，同时支持小型任务的本地执行。报告服务提供可搜索的测试、日志、结果、覆盖率信息和项目状态汇总。
 
-## Design IP 库
+## `uve_ip`：可复用 Design IP 库
 
 UVE 包含持续扩展的可复用 Design IP 和集成示例库，用于为常见 SoC 功能提供一致的起点，并将这些功能同时提供给设计和验证工具流。
 
@@ -169,7 +169,7 @@ Design IP 库结合验证、寄存器描述、文档和集成支持进行开发�
 
 Design IP 方向包含面向 AXI4-Lite、APB 等接口的可复用协议模块和可配置 wrapper。通过 wrapper 配置，同一集成概念可以适配不同项目环境，而不需要每个项目重新构建周边基础设施。
 
-## 可复用验证包
+## `uve_pkg`：通用可复用验证包
 
 UVE 验证包库为常见验证关注点提供可复用的 SystemVerilog/UVM 基础设施，包括：
 
@@ -185,9 +185,9 @@ UVE 验证包库为常见验证关注点提供可复用的 SystemVerilog/UVM 基
 - 面向 AHB、APB、AXI、AXI-Stream、I2C、OCP、SPI 和 UART 的协议寄存器支持；以及
 - 验证报告和共享辅助服务。
 
-验证包库还配套提供可复用的 I2C、SPI 和 UART 协议验证支持，用于减少重复的基础设施开发，同时保持项目环境的灵活性。
+`uve_pkg` 提供通用验证基础，并由下面单独的协议验证包系列进行补充。
 
-### 验证包目录
+### `uve_pkg` 包目录
 
 当前可复用验证包包括：
 
@@ -218,20 +218,26 @@ UVE 验证包库为常见验证关注点提供可复用的 SystemVerilog/UVM 基
 | `uve_reg_ocp_pkg` | OCP register 验证支持。 |
 | `uve_reg_spi_pkg` | SPI register 验证支持。 |
 | `uve_reg_uart_pkg` | UART register 验证支持。 |
+验证包目录支持组合使用：团队可以从通用服务开始，加入协议包，再扩展项目专用验证组件。
+
+## `uve_protocol_pkg`：通用可复用协议验证包
+
+`uve_protocol_pkg` 系列提供面向常用接口和协议的可复用验证组件。它与通用 `uve_pkg` 基础分开组织，协议 agent 和服务可以独立采用。
+
+| Package | 简介 |
+|---|---|
 | `uve_protocol_pkg` | 面向协议的可复用验证包系列。 |
 | `uve_i2c_pkg` | 可复用 I2C 验证组件。 |
 | `uve_spi_pkg` | 可复用 SPI 验证组件。 |
 | `uve_uart_pkg` | 可复用 UART 验证组件。 |
 
-验证包目录支持组合使用：团队可以从通用服务开始，加入协议包，再扩展项目专用验证组件。
-
 ### 验证 IP 与 VIP 方向
 
 UVE 正在开发面向常用协议和接口行为的可复用验证组件及 VIP 库，目标是提供可配置的 agent、monitor、driver、scoreboard、sequence、协议检查和共享验证服务，并支持跨项目组合使用。
 
-## 行为模型与架构模型库
+## UVE 行为模型库
 
-UVE 包含架构级建模平台，用于在详细 RTL 实现前进行早期系统探索。该平台基于软件模型和事务级接口，使团队能够在合适的抽象层次研究系统行为、集成和性能问题。
+UVE 包含面向仿真验证和系统行为研究的行为模型库。模型为处理器、互连、存储器、外设、安全和连接功能提供可复用的行为表示，可与验证环境配合使用。
 
 模型和组件方向包括：
 
@@ -246,31 +252,39 @@ UVE 包含架构级建模平台，用于在详细 RTL 实现前进行早期系�
 - telemetry 和事务观测组件；以及
 - AI 加速器和 NPU 架构探索。
 
-模型库支持拓扑探索、架构评审、性能研究、集成实验以及从架构工作向 RTL 开发的结构化交付。
+行为模型库支持仿真、集成实验、软件可见行为检查以及可复用的系统级验证场景。
 
-### 架构模型目录
+### 行为模型目录
 
 当前架构和行为模型平台包括以下模型系列：
 
 | 模型系列 | 简介 |
 |---|---|
-| CPU models | RISC-V 处理器和 CPU wrapper 探索。 |
-| Interconnect models | crossbar、仲裁器和系统互连探索。 |
-| NoC models | NoC 和拓扑探索。 |
-| Memory models | DDR/HBM 方向存储系统研究。 |
-| Chiplet models | chiplet 和 die-to-die 连接研究。 |
-| PCIe models | PCIe 连接和集成研究。 |
-| Ethernet models | Ethernet 连接和流量研究。 |
-| CXL models | CXL fabric 和内存扩展研究。 |
-| Peripheral models | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断行为。 |
-| Clock and power models | 时钟、复位和电源管理行为。 |
-| Security models | root-of-trust、secure-boot 和访问控制行为。 |
-| Telemetry models | 被动观测和事务 telemetry 支持。 |
-| AI models | AI 加速器和 NPU 架构探索。 |
+| CPU behavior models | 用于仿真和集成研究的处理器及 CPU wrapper 行为。 |
+| Interconnect behavior models | crossbar、仲裁器和系统互连行为。 |
+| Memory behavior models | DDR/HBM 方向存储器行为。 |
+| Peripheral behavior models | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断行为。 |
+| Connectivity behavior models | PCIe、Ethernet、CXL 及相关连接行为。 |
+| Security behavior models | root-of-trust、secure-boot 和访问控制行为。 |
+| Telemetry behavior models | 被动观测和事务 telemetry 行为。 |
+| AI behavior models | AI 加速器和 NPU 方向行为。 |
 
-这些模型系列用于架构探索、集成实验、性能研究和软件可见系统评估。
+## `uve_arch`：架构探索与性能分析平台
 
-架构工具流基于 SystemC 和 Accellera 生态技术，正在从组件级探索扩展到完整系统研究、软件可见行为、Linux 启动以及架构到 RTL 的验证。
+`uve_arch` 基于 SystemC 和 Accellera 生态技术，支持详细 RTL 实现前的架构探索、系统设计研究、集成验证和性能分析。模型系列包括：
+
+| 架构模型系列 | 简介 |
+|---|---|
+| CPU architecture models | RISC-V 处理器和 CPU wrapper 架构研究。 |
+| Interconnect and NoC models | crossbar、仲裁器、NoC 和拓扑研究。 |
+| Memory-system models | DDR/HBM 和存储器控制器性能研究。 |
+| Chiplet and die-to-die models | chiplet 连接和系统集成研究。 |
+| High-speed fabric models | PCIe、Ethernet 和 CXL 架构研究。 |
+| Peripheral-system models | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断集成。 |
+| Clock, power, and security models | 时钟/电源时序、root-of-trust、secure-boot 和访问控制研究。 |
+| AI/NPU architecture models | AI 加速器和 NPU 系统探索。 |
+
+架构工具流正在向完整系统研究、软件可见行为、Linux 启动以及架构到 RTL 的验证扩展。
 
 ## 寄存器与测试平台生成
 
@@ -319,21 +333,6 @@ UVE 提供将项目元数据转换为工程视图和报告的工具。
 - 相关描述之间的一致性检查；以及
 - 用于浏览项目信息的本地报告服务。
 
-### 工具和产品目录
-
-| 工具或产品 | 简介 |
-|---|---|
-| `uve_tools` | UVE 主命令行工具集，提供项目工具流和验证任务支持。 |
-| `run.py` | 通用 SystemVerilog/UVM 工具流入口。 |
-| `run_cocotb.py` | Python 和 cocotb 工具流入口。 |
-| `jg_run.py` | JasperGold 方向形式验证和分析工具流入口。 |
-| `svunit.py` | SVUnit 测试发现和执行支持。 |
-| `reggen` | 寄存器描述转换和产物生成工具。 |
-| `uve-info` | 项目和验证包信息浏览器。 |
-| `uve-project-viewer` | UVE VS Code 项目探索和检查扩展。 |
-| `uve_arch` | 基于 SystemC/Accellera 的架构建模和探索平台。 |
-| `uve_ci` | 基于 Forgejo/Woodpecker 的 CI/CD 部署和自动化支持。 |
-
 ## UVE VS Code 扩展
 
 UVE VS Code 扩展将项目探索和检查能力集成到编辑器中，提供：
@@ -363,6 +362,6 @@ UVE 提供以下项目自动化能力：
 
 CI/CD 环境基于 Forgejo 和 Woodpecker 工具流构建，用于支持多项目协作、自动验证、打包、产物发布和可重复的工程检查。
 
-## 开发方向
+## 持续开发
 
-UVE 持续开发中，当前方向包括更丰富的可复用 IP 和 VIP、更完善的行为及架构模型、更深入的寄存器与验证包集成、pyuvm 和 Python 工具流支持、更广泛的仿真器和形式验证工具支持、支持 Linux 启动的系统研究、更强的项目分析能力，以及更完善的编辑器工作流。
+UVE 持续开发中。

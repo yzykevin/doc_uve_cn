@@ -9,7 +9,6 @@
 project = 'UVE'
 copyright = '2021-2026, Saltyfish'
 author = 'Saltyfish'
-release = '1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -30,8 +29,15 @@ master_doc = 'index'
 
 import os
 import sphinx_rtd_theme
+
+rtd_version = os.environ.get('READTHEDOCS_VERSION_NAME')
+release = rtd_version or 'development'
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_options = {
+    "navigation_depth": 4,
+    "collapse_navigation": False,
+}
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 html_js_files = [
     ("readthedocs.js", {"defer": "defer"}),

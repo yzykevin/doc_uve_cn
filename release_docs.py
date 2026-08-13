@@ -20,11 +20,15 @@ def run(cmd: list[str], dry_run: bool = False) -> None:
 
 
 def get_output(cmd: list[str]) -> str:
-    return subprocess.run(cmd, cwd=REPO, capture_output=True, text=True).stdout.strip()
+    result = subprocess.run(cmd, cwd=REPO, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"  ERROR: {result.stderr.strip()}", file=sys.stderr)
+        sys.exit(result.returncode)
+    return result.stdout.strip()
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Tag and publish a versioned doc release.")
+    parser = argparse.ArgumentParser(description="Create and publish a version tag for the documentation.")
     parser.add_argument("version", help="Version tag to create, e.g. v2.8")
     parser.add_argument("-m", "--message", default="", help="Tag annotation message (optional)")
     parser.add_argument("--dry-run", action="store_true", help="Print commands without executing")
@@ -44,27 +48,20 @@ def main() -> None:
     if not dry_run:
         status = get_output(["git", "status", "--porcelain"])
         if status:
-            print("WARNING: uncommitted changes detected.")
-            answer = input("Stage and commit all changes before tagging? [y/N] ").strip().lower()
-            if answer == "y":
-                run(["git", "add", "-A"])
-                run(["git", "commit", "-m", f"docs: prepare {version} release"])
-            else:
-                print("Aborting - please commit or stash changes first.", file=sys.stderr)
-                sys.exit(1)
+            print("ERROR: uncommitted changes detected; commit or stash them first.", file=sys.stderr)
+            sys.exit(1)
 
         existing_tags = get_output(["git", "tag"]).splitlines()
         if version in existing_tags:
             print(f"ERROR: tag {version} already exists.", file=sys.stderr)
             sys.exit(1)
 
-    run(["git", "push", "origin", "main"], dry_run)
     run(["git", "tag", "-a", version, "-m", tag_message], dry_run)
     run(["git", "push", "origin", version], dry_run)
 
     print(f"\nDone. ReadTheDocs will now build version '{version}'.")
     if not dry_run:
-        print("Ensure the new version is set to Active and Public in the RTD dashboard.")
+        print("Ensure the new version is enabled and public in the RTD dashboard.")
 
 
 if __name__ == "__main__":
