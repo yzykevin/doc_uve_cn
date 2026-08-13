@@ -131,6 +131,40 @@ UVE 包含持续扩展的可复用 Design IP 和集成示例库，用于为常�
 
 Design IP 库结合验证、寄存器描述、文档和集成支持进行开发，使模块能够作为完整项目的一部分进行评估，而不是孤立的源代码目录。
 
+### Design IP 目录
+
+当前自研 Design IP 包括：
+
+| IP | 简介 |
+|---|---|
+| `uve_uart` | UART 外设及面向验证的集成支持。 |
+| `uve_spi_host` | SPI host 外设。 |
+| `uve_i2c` | I2C 控制器外设。 |
+| `uve_gpio` | 通用 I/O 外设。 |
+| `uve_mailbox` | mailbox 和消息传递支持。 |
+| `uve_intc` | 中断控制和中断路由支持。 |
+| `uve_aon_timer` | always-on 定时器功能。 |
+| `uve_timer` | 通用定时器功能。 |
+| `uve_clk_mgr` | 时钟管理支持。 |
+| `uve_reset_mgr` | 复位管理支持。 |
+| `uve_pmu` | 电源管理支持。 |
+| `uve_pinmux` | 引脚复用支持。 |
+| `uve_boot_rom` | boot-ROM 和启动支持。 |
+| `uve_soc_info` | SoC 信息和识别支持。 |
+| `uve_axi_apb_bridge` | AXI/APB bridge 及集成支持。 |
+| `uve_noc_mgmt` | NoC 管理和系统控制支持。 |
+| `uve_firewall` | 访问控制和 firewall 支持。 |
+| `uve_errmgr` | 错误管理支持。 |
+| `uve_debug_ctrl` | debug 控制支持。 |
+| `uve_debug_status` | debug 状态和可观测性支持。 |
+| `uve_debug_lock` | debug 访问锁和保护支持。 |
+| `uve_debug_bus_gate` | debug 总线访问门控支持。 |
+| `uve_jtag_tap` | JTAG tap 和 debug 连接支持。 |
+| `uve_dsp` | DSP 方向处理支持。 |
+| `fly_npu` | AI/NPU 方向处理支持，持续开发中。 |
+
+随着新的可复用模块和集成示例成熟，目录会持续扩展。
+
 ### 协议 IP 与可配置 wrapper
 
 Design IP 方向包含面向 AXI4-Lite、APB 等接口的可复用协议模块和可配置 wrapper。通过 wrapper 配置，同一集成概念可以适配不同项目环境，而不需要每个项目重新构建周边基础设施。
@@ -152,6 +186,44 @@ UVE 验证包库为常见验证关注点提供可复用的 SystemVerilog/UVM 基
 - 验证报告和共享辅助服务。
 
 验证包库还配套提供可复用的 I2C、SPI 和 UART 协议验证支持，用于减少重复的基础设施开发，同时保持项目环境的灵活性。
+
+### 验证包目录
+
+当前可复用验证包包括：
+
+| Package | 简介 |
+|---|---|
+| `uve_base_pkg` | 基础验证服务和通用基础。 |
+| `uve_common_pkg` | 共享验证工具和通用类型。 |
+| `uve_utils_pkg` | 通用验证辅助工具。 |
+| `uve_env_pkg` | 可复用 environment 级支持。 |
+| `uve_phase_pkg` | 验证 phase 和生命周期支持。 |
+| `uve_clk_pkg` | 时钟相关验证支持。 |
+| `uve_reset_pkg` | 复位相关验证支持。 |
+| `uve_sync_pkg` | 同步相关验证支持。 |
+| `uve_pins_pkg` | 引脚级验证支持。 |
+| `uve_interrupt_pkg` | 中断验证服务。 |
+| `uve_dma_pkg` | DMA 方向验证支持。 |
+| `uve_memory_pkg` | 存储器方向验证支持。 |
+| `uve_error_injection_pkg` | 错误注入和负向测试支持。 |
+| `uve_performance_pkg` | 性能测量和分析支持。 |
+| `uve_report_pkg` | 验证结果和报告支持。 |
+| `uve_obj_pool_pkg` | 可复用对象和事务池支持。 |
+| `uve_reg_utils_pkg` | register model 工具。 |
+| `uve_reg_ahb_pkg` | AHB register 验证支持。 |
+| `uve_reg_apb_pkg` | APB register 验证支持。 |
+| `uve_reg_axi_pkg` | AXI register 验证支持。 |
+| `uve_reg_axis_pkg` | AXI-Stream register 验证支持。 |
+| `uve_reg_i2c_pkg` | I2C register 验证支持。 |
+| `uve_reg_ocp_pkg` | OCP register 验证支持。 |
+| `uve_reg_spi_pkg` | SPI register 验证支持。 |
+| `uve_reg_uart_pkg` | UART register 验证支持。 |
+| `uve_protocol_pkg` | 面向协议的可复用验证包系列。 |
+| `uve_i2c_pkg` | 可复用 I2C 验证组件。 |
+| `uve_spi_pkg` | 可复用 SPI 验证组件。 |
+| `uve_uart_pkg` | 可复用 UART 验证组件。 |
+
+验证包目录支持组合使用：团队可以从通用服务开始，加入协议包，再扩展项目专用验证组件。
 
 ### 验证 IP 与 VIP 方向
 
@@ -175,6 +247,28 @@ UVE 包含架构级建模平台，用于在详细 RTL 实现前进行早期系�
 - AI 加速器和 NPU 架构探索。
 
 模型库支持拓扑探索、架构评审、性能研究、集成实验以及从架构工作向 RTL 开发的结构化交付。
+
+### 架构模型目录
+
+当前架构和行为模型平台包括以下模型系列：
+
+| 模型系列 | 简介 |
+|---|---|
+| CPU models | RISC-V 处理器和 CPU wrapper 探索。 |
+| Interconnect models | crossbar、仲裁器和系统互连探索。 |
+| NoC models | NoC 和拓扑探索。 |
+| Memory models | DDR/HBM 方向存储系统研究。 |
+| Chiplet models | chiplet 和 die-to-die 连接研究。 |
+| PCIe models | PCIe 连接和集成研究。 |
+| Ethernet models | Ethernet 连接和流量研究。 |
+| CXL models | CXL fabric 和内存扩展研究。 |
+| Peripheral models | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断行为。 |
+| Clock and power models | 时钟、复位和电源管理行为。 |
+| Security models | root-of-trust、secure-boot 和访问控制行为。 |
+| Telemetry models | 被动观测和事务 telemetry 支持。 |
+| AI models | AI 加速器和 NPU 架构探索。 |
+
+这些模型系列用于架构探索、集成实验、性能研究和软件可见系统评估。
 
 架构工具流基于 SystemC 和 Accellera 生态技术，正在从组件级探索扩展到完整系统研究、软件可见行为、Linux 启动以及架构到 RTL 的验证。
 
@@ -224,6 +318,21 @@ UVE 提供将项目元数据转换为工程视图和报告的工具。
 - 工具及环境信息；
 - 相关描述之间的一致性检查；以及
 - 用于浏览项目信息的本地报告服务。
+
+### 工具和产品目录
+
+| 工具或产品 | 简介 |
+|---|---|
+| `uve_tools` | UVE 主命令行工具集，提供项目工具流和验证任务支持。 |
+| `run.py` | 通用 SystemVerilog/UVM 工具流入口。 |
+| `run_cocotb.py` | Python 和 cocotb 工具流入口。 |
+| `jg_run.py` | JasperGold 方向形式验证和分析工具流入口。 |
+| `svunit.py` | SVUnit 测试发现和执行支持。 |
+| `reggen` | 寄存器描述转换和产物生成工具。 |
+| `uve-info` | 项目和验证包信息浏览器。 |
+| `uve-project-viewer` | UVE VS Code 项目探索和检查扩展。 |
+| `uve_arch` | 基于 SystemC/Accellera 的架构建模和探索平台。 |
+| `uve_ci` | 基于 Forgejo/Woodpecker 的 CI/CD 部署和自动化支持。 |
 
 ## UVE VS Code 扩展
 
