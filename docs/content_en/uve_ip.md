@@ -1,6 +1,9 @@
 # `uve_ip`：可复用 Design IP 库
 
-```{include} overview.md
-:start-after: "<!-- split: uve_ip -->"
-:end-before: "<!-- split: uve_pkg -->"
+```{toctree}
+:maxdepth: 1
+:caption: Design IP 模块
+
+uve_ip_catalog
+uve_ip_protocol
 ```

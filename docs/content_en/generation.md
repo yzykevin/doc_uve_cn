@@ -1,6 +1,9 @@
 # 寄存器与测试平台生成
 
-```{include} overview.md
-:start-after: "<!-- split: generation -->"
-:end-before: "<!-- split: project_analysis -->"
+```{toctree}
+:maxdepth: 1
+:caption: 生成模块
+
+generation_register
+generation_testbench
 ```

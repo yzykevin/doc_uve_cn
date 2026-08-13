@@ -1,6 +1,8 @@
 # `uve_pkg`：通用可复用验证包
 
-```{include} overview.md
-:start-after: "<!-- split: uve_pkg -->"
-:end-before: "<!-- split: uve_protocol_pkg -->"
+```{toctree}
+:maxdepth: 1
+:caption: 验证包模块
+
+uve_pkg_catalog
 ```

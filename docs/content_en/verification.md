@@ -1,6 +1,9 @@
 # 验证环境与完整验证流程
 
-```{include} overview.md
-:start-after: "<!-- split: verification -->"
-:end-before: "<!-- split: toolchain -->"
+```{toctree}
+:maxdepth: 1
+:caption: 验证模块
+
+verification_environment
+verification_flow
 ```

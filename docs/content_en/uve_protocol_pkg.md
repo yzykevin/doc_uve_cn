@@ -1,6 +1,8 @@
 # `uve_protocol_pkg`：通用可复用协议验证包
 
-```{include} overview.md
-:start-after: "<!-- split: uve_protocol_pkg -->"
-:end-before: "<!-- split: behavior_models -->"
+```{toctree}
+:maxdepth: 1
+:caption: 协议验证包模块
+
+uve_protocol_catalog
 ```
