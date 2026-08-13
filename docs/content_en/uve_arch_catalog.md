@@ -4,13 +4,13 @@
 
 | 模型系列 | 简介 |
 |---|---|
-| CPU and processor models | 处理器和 CPU wrapper 架构研究。 |
-| Interconnect and NoC models | crossbar、仲裁器、NoC 和拓扑研究。 |
-| Memory-system models | DDR/HBM 和存储器控制器性能研究。 |
-| Chiplet and die-to-die models | chiplet 连接和系统集成研究。 |
-| High-speed fabric models | PCIe、Ethernet 和 CXL 架构研究。 |
-| Peripheral-system models | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断集成。 |
-| Clock, power, and security models | 时钟/电源时序、root-of-trust、secure-boot 和访问控制研究。 |
-| AI/NPU architecture models | AI 加速器和 NPU 系统探索。 |
+| CPU 与处理器模型 | 处理器和 CPU wrapper 架构研究。 |
+| 互连与 NoC 模型 | crossbar、仲裁器、NoC 和拓扑研究。 |
+| 存储系统模型 | DDR/HBM 和存储器控制器性能研究。 |
+| Chiplet 与 die-to-die 模型 | chiplet 连接和系统集成研究。 |
+| 高速互连模型 | PCIe、Ethernet 和 CXL 架构研究。 |
+| 外设系统模型 | UART、SPI、I2C、GPIO、timer、watchdog、RTC 和中断集成。 |
+| 时钟、电源与安全模型 | 时钟/电源时序、root-of-trust、secure-boot 和访问控制研究。 |
+| AI/NPU 架构模型 | AI 加速器和 NPU 系统探索。 |
 
 该平台用于研究架构选择、集成行为、性能瓶颈和系统级权衡，为详细 RTL 实现提供依据。

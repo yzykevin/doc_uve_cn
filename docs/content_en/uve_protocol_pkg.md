@@ -1,4 +1,4 @@
-# `uve_protocol_pkg`：通用可复用协议验证包
+# UVE_PROTOCOL_PKG：通用可复用协议验证包
 
 ```{toctree}
 :maxdepth: 1

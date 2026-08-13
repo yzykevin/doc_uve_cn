@@ -1,4 +1,4 @@
-# `uve_arch`：架构探索与性能分析平台
+# UVE_ARCH：架构探索与性能分析平台
 
 ```{toctree}
 :maxdepth: 1

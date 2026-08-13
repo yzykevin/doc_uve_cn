@@ -1,4 +1,4 @@
-# `uve_pkg`：通用可复用验证包
+# UVE_PKG：通用可复用验证包
 
 ```{toctree}
 :maxdepth: 1

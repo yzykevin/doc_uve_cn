@@ -7,7 +7,7 @@
 | `generic_gpio_pad_model` | GPIO pad 驱动、高阻态和竞争行为。 |
 | `generic_i2c_target_model` | I2C target、应答、数据载荷和协议边界行为。 |
 | `generic_lpddr_subsystem_model` | 用于存储系统集成研究的 LPDDR 子系统行为。 |
-| `generic_pcie_endpoint_model` | PCIe endpoint 完成、**中断和控制访问场景。 |
+| `generic_pcie_endpoint_model` | PCIe endpoint 完成、中断和控制访问场景。 |
 | `generic_pinmux_pad_model` | 引脚复用、输出使能、上下拉、输入和竞争行为。 |
 | `generic_pll_model` | PLL 锁定、重锁定、禁用和门控输出行为。 |
 | `generic_power_domain_model` | 电源域睡眠、唤醒、保持和非保持行为。 |

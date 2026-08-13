@@ -1,4 +1,4 @@
-# `uve_ip`：可复用 Design IP 库
+# UVE_IP：通用可复用 Design IP 库
 
 ```{toctree}
 :maxdepth: 1
